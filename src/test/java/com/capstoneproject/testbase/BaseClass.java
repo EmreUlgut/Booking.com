@@ -25,7 +25,9 @@ public class BaseClass {
         switch (ConfigsReader.getProperty("browser").toLowerCase()) {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                //options.addArguments("--incognito");
+                driver = new ChromeDriver(options);
                 break;
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", Constants.GECKO_DRIVER_PATH);

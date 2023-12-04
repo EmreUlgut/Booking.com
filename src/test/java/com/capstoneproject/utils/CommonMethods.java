@@ -1,6 +1,7 @@
 package com.capstoneproject.utils;
 
 import com.capstoneproject.testbase.PageInitializer;
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +19,8 @@ import java.util.Set;
 import static com.capstoneproject.testbase.BaseClass.driver;
 
 public class CommonMethods extends PageInitializer {
+
+    static Faker faker = new Faker();
 
     /**
      * This method clears the textbox and sends another text
@@ -360,5 +363,15 @@ public class CommonMethods extends PageInitializer {
         return sdf.format(date.getTime());
 
     }
+
+    public static String fakeEmail(){
+        return faker.internet().emailAddress();
+    }
+
+    public static String fakePassword(){
+        return faker.regexify("[A-Za-z0-9]{10}");
+    }
+
+
 
 }
