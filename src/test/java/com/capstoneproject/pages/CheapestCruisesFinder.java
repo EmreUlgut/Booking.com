@@ -12,9 +12,9 @@ public class CheapestCruisesFinder extends BaseClass {
 public WebElement cruises;
 
 @FindBy(xpath = "//input[@id='autoComplete']")
-public WebElement cruisesWhereDo;
+public WebElement cruisesWhereTo;
 
-@FindBy(xpath = "//span[normalize-space()='Bahamas']")
+@FindBy(xpath = "//li[@id='autoComplete_result_0']")
 public WebElement cruisesBahamas;
 
 @FindBy(xpath="//a[@id='hp_searchContinue']")
@@ -30,7 +30,10 @@ public WebElement cruisesPriceLowToHigh;
 public WebElement cruisesApplyButton;
 
 @FindBy(xpath = "//h2[@id='brochureName1']")
-public WebElement cruisesTwoNightBahamas;
+public WebElement cruisesInfo;
+
+@FindBy(xpath = "//div[@id='lowLeadPrice1']")
+public WebElement cruisePrice;
 
 
 

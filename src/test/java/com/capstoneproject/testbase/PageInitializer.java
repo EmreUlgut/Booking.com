@@ -11,6 +11,7 @@ public class PageInitializer extends BaseClass {
     public static CheapestCruisesFinder cheapestCruisesFinder;
 
     public static void initialize() {
+
         loginPage = new LoginPage(driver);
         cheapestHotelFinder = new CheapestHotelFinder(driver);
         premiumCarRental = new PremiumCarRental(driver);

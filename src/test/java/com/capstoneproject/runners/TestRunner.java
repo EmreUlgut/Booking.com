@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
 
         // runs test cases that have same tags
-        tags = "@Register     ",
+        tags = "@smoke_test",
 
         monochrome = true,
         plugin = {

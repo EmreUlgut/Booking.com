@@ -5,6 +5,7 @@ import com.capstoneproject.utils.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
@@ -26,13 +27,22 @@ public class BaseClass {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
                 ChromeOptions options = new ChromeOptions();
-                //options.addArguments("--incognito");
+                options.addArguments("--incognito");
+                options.addArguments("--disable-blink-features=AutomationControlled");
+
                 driver = new ChromeDriver(options);
                 break;
+
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", Constants.GECKO_DRIVER_PATH);
                 driver = new FirefoxDriver();
                 break;
+
+            case "edge":
+                System.setProperty("webdriver.edge.driver", Constants.EDGE_DRIVER_PATH);
+                driver = new EdgeDriver();
+                break;
+
             default:
                 throw new RuntimeException("Browser is not supported!");
         }
@@ -41,8 +51,9 @@ public class BaseClass {
         driver.manage().window().maximize();
         driver.get(ConfigsReader.getProperty("url"));
 
-        // we initialize all the page elements of the classes in package com.capstone.pages
+        // we initialize all the page elements of the classes in package com.capstoneproject.pages
         PageInitializer.initialize();
+
 
         return driver;
     }

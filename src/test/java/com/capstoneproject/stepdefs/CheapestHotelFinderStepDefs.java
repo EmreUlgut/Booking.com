@@ -11,6 +11,9 @@ public class CheapestHotelFinderStepDefs extends CommonMethods {
 
     @Given("the user enters {string} in the destination search field")
     public void the_user_enters_in_the_destination_search_field(String string) {
+        if (loginPage.popUpWindow.isDisplayed()){
+            click(loginPage.popUpWindow);}
+
         sendText(cheapestHotelFinder.whereTo, string);
         click(cheapestHotelFinder.clickDestination);
 

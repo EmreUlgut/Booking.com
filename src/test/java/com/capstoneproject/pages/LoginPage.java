@@ -18,13 +18,14 @@ public class LoginPage extends BaseClass {
     public WebElement signinButton;
     @FindBy(xpath = "//div[text()='Your account']")
     public WebElement yourAccount;
-    @FindBy(xpath = "//div[@id='password-note']")
-    public WebElement errorMessage;
+//    @FindBy(xpath = "//div[@id='password-note']")
+//    public WebElement errorMessage;
     @FindBy(xpath = "//span[normalize-space()='Continue with email']")
     public WebElement continueWithEmail;
+    @FindBy(xpath = "//button[@aria-label='Dismiss sign-in info.']")
+    public WebElement popUpWindow;
 
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(BaseClass.driver, this);
     }
-
 }

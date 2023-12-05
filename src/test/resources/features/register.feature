@@ -1,6 +1,6 @@
 Feature: User Registration on booking.com
 
-  @Register
+  @Register @smoke_test
   Scenario: New user registration
     Given the user is on the booking.com registration page
     When the user enters their valid registration details

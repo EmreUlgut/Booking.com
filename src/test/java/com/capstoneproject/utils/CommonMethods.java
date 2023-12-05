@@ -374,4 +374,8 @@ public class CommonMethods extends PageInitializer {
 
 
 
+    public static void popUpPage(){
+
+    }
+
 }
