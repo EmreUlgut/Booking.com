@@ -1,6 +1,6 @@
 Feature: Car Rental on Booking.com
 
-  @CarRental
+  @CarRental @smoke_test
   Scenario: User wants to rent a premium car on Booking.com website
     Given the user navigates to the car rental section
     And the user selects the location "New York"
