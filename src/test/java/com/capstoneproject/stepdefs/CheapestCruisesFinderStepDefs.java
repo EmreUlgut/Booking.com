@@ -23,6 +23,7 @@ public class CheapestCruisesFinderStepDefs extends CommonMethods {
     @When("the user clicks on the Cruises option in the navigation menu")
     public void the_user_clicks_on_the_option_in_the_navigation_menu() {
         click(cheapestCruisesFinder.cruisesWhereTo);
+        wait(3);
     }
 
     @When("the user types Bahamas as the destination in the Where do you want to cruise? search box")
