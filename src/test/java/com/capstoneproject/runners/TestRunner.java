@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         plugin = {
                 "pretty", //prints gherkin steps in console
-                "html:target/cucumber-default-report", //create a basic html report in target folder
+                "html:target/cucumber-report.html", //create a basic html report in target folder
                 "json:target/cucumber.json",
                 "rerun:target/failed.txt"
         }
